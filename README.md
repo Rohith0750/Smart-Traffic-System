@@ -32,7 +32,7 @@ board           raspberry pi 5
 📝 Installation
 Follow these steps to set up the project:
 # Clone this repository
-git clone https://github.com/yourusername/smart-traffic-management.git
+git clone http://github.com/Rohith0750/Smart-Traffic-System/tree/main
 cd smart-traffic-management
 
 # Install dependencies
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 # Set up the MySQL database
 # Import the schema
-mysql -u your_user -p your_database < database/schema.sql
+mysql -u your_user -p traffic_mangaement < database/schema.sql
 
 # Configure your DB credentials in config.py
 
@@ -52,14 +52,14 @@ This project uses a YOLOv8 model fine-tuned on a custom dataset of ambulances an
 yolo train data=dataset.yaml model=yolov8s.pt epochs=100
 
 # Evaluate the model
-yolo val model=runs/train/weights/best.pt data=dataset.yaml
+yolo val model=runs/train/weights/best.pt   data=dataset.yaml
 
 
 
 📊 Performance
 Metric	              Value
 mAP (50-95)         	0.89
-Inference Speed	     40 FPS on GPU
+Inference Speed	     25 FPS on GPU
 Precision	           0.92
 Recall	             0.90
 
